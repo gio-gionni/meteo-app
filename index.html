@@ -12,8 +12,12 @@
   <body>
     <div class="weatherapp">
     <header>
-      <form class="searchform">
-        <input type="search" placeholder="Enter a city.." required class="search-bar"/>
+      <form class="searchform" id="search-form">
+        <input type="search" 
+        placeholder="Enter a city.." 
+        required 
+        class="search-bar" 
+        id="search-form-input"/>
         <input type="submit" value="Search" class="search-button" />
       </form>
      
@@ -26,7 +30,7 @@
         </ul>
       </div> 
       <div class="weather-main">
-        <h1 class="weather-app-city">Paris</h1>
+        <h1 class="weather-app-city" id="city">Paris</h1>
         <p class="weather-app-icon"> 
           🌧
         </p>
