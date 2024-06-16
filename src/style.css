@@ -4,7 +4,11 @@ body {
 }
 
 a {
-  color: ;
+  color: darkcyan;
+}
+
+header {
+  padding-bottom: 10px;
 }
 
 .weatherapp {
@@ -40,7 +44,7 @@ footer {
 }
 
 .search-button {
-  background: #885df1;
+  background: darkcyan;
   padding: 15px 30px;
   border: none;
   font-size: 16px;
@@ -56,6 +60,10 @@ ul {
   justify-content: space-between;
 }
 
+.day-and-date {
+  font-style: oblique;
+}
+
 .weather-main {
   display: grid;
   place-items: center;
@@ -63,7 +71,7 @@ ul {
 }
 .weather-app-city {
   margin: 0;
-  color: coral;
+  color: darkcyan;
   padding: 0;
   margin: 0;
 }
@@ -82,4 +90,9 @@ ul {
 .weather-app-condition {
   padding: 0;
   margin: 0;
+}
+
+strong {
+  color: rgba(0, 139, 139, 0.5);
+  text-decoration: underline;
 }
