@@ -26,19 +26,19 @@
     <main>
       <div>
         <ul class="day-and-date">
-          <li>Thursday</li>
-          <li>17:00</li>
+          <li id="day"></li>
+          <li id="time"></li>
         </ul>
       </div> 
       <div class="weather-main">
         <h1 class="weather-app-city" id="city"></h1>
-        <p class="weather-app-icon"> 
+        <p class="weather-app-icon" id="weather-icon"> 
           🌧
         </p>
           <p class="weather-app-temperature">
             <span  id="temperature">12</span>°C
           </p>
-          <p class="weather-app-condition">
+          <p class="weather-app-condition" id="condition">
           raining 
         </p>
 
@@ -48,13 +48,13 @@
         
         <ul> 
           <li>
-         Humidity: <strong>48%</strong> 
+         Humidity: <strong id="humidity">48</strong> %
 
        </li>
          <li>
 
            Wind:
-           <strong> 5.14km/h</strong>
+           <strong id="wind"> 5.14</strong> km/h
          </li>
      
         </ul>  
