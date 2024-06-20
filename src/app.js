@@ -6,7 +6,7 @@ function refreshWeather(response) {
   let windElement = document.querySelector("#wind");
   let dayElement = document.querySelector("#day");
   let timeElement = document.querySelector("#time");
-  let iconElement = document.querySelector("#icon");
+  let iconElement = document.querySelector("#weather-icon");
   let conditionElement = document.querySelector("#condition");
   let date = new Date(response.data.time * 1000);
 
@@ -17,6 +17,9 @@ function refreshWeather(response) {
   conditionElement.innerHTML = response.data.condition.description;
   timeElement.innerHTML = formatTime(date);
   dayElement.innerHTML = formatDate(date);
+  iconElement.innerHTML = `<img src= "${response.data.condition.icon_url}"/>`;
+  // img src=http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png;
+  //"<img src=`${response.data.condition.icon_url}`>;";
 }
 
 function formatDate(date) {
