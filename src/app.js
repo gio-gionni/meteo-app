@@ -18,8 +18,7 @@ function refreshWeather(response) {
   timeElement.innerHTML = formatTime(date);
   dayElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src= "${response.data.condition.icon_url}"/>`;
-  // img src=http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png;
-  //"<img src=`${response.data.condition.icon_url}`>;";
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -65,7 +64,13 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-function displayforecast() {
+function getForecast(city) {
+  let apiKey = "aca2a4of530d0tf79751324ac6b3f501";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayforecast);
+}
+
+function displayforecast(response) {
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
